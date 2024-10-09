@@ -49,12 +49,14 @@ public class TestCases {
         WebElement nameElement = driver.findElement(By.xpath("//div[@class='rFrNMe k3kHxc RdH0ib yqQS1 zKHdkd']/div/div/div/input"));
        //Thread.sleep(3000);
        Wrappers.enterText(nameElement, "Crio Learner");
+       System.out.println("Wait 1");
 
       // Thread.sleep(3000);
         WebElement autoElement = driver.findElement(By.xpath("//textarea[@class='KHxj8b tL9Q4c']"));
         String txt = "I want to be the best QA Engineer! ";
         String Epochtime = Wrappers.getEpochTimeString();
         Wrappers.enterText(autoElement, txt + " "+ Epochtime );
+        System.out.println("Wait 2");
 
 
         Wrappers.radioButton(driver, "0 - 2");
@@ -64,7 +66,7 @@ public class TestCases {
         Wrappers.checkBox(driver, "Selenium");
         Wrappers.checkBox(driver, "TestNG");
 
-
+        System.out.println("Wait 3");
         WebElement dropDownWebElement = driver.findElement(By.xpath("//div[contains(@class,'DEh1R')]"));
         Wrappers.clickonElement(driver, dropDownWebElement);
         Wrappers.dropDownClick(driver, "Mr");
