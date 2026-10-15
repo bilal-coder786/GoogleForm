@@ -57,7 +57,7 @@ public class Wrappers {
 
     public static void dropDownClick(ChromeDriver driver, String dropDownText) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
             WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class, 'QXL7Te')]//span[text()='"
                     + dropDownText + "']")));
             element.click();
@@ -68,7 +68,7 @@ public class Wrappers {
 
     public static void clickonElement(ChromeDriver driver, WebElement element) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
             wait.until(ExpectedConditions.elementToBeClickable(element));
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].click();", element);

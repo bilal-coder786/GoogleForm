@@ -87,9 +87,9 @@ public class TestCases {
         Assert.assertEquals(successMsg.getText().trim(), expectedMsg);
     }
 
-    @AfterTest
-    public void endTest() throws InterruptedException {
-        driver.close();
-        driver.quit();
-    }
+    // @AfterTest
+    // public void endTest() throws InterruptedException {
+    //     driver.close();
+    //     driver.quit();
+    // }
 }
